@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    image: yadsendewlung/nextjs-ollama-llm-ui
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_OLLAMA_URL: ''
+    volumes:
+      - .:/app
